@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ExampleComponent < ViewComponent::Base
   def initialize(title:, content:)
     @title = title

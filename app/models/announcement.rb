@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: announcements
@@ -11,14 +13,14 @@
 #  updated_at        :datetime         not null
 #
 class Announcement < ApplicationRecord
-  TYPES = %w[new fix update]
+  TYPES = %w[new fix update].freeze
 
   # extends ...................................................................
   # includes ..................................................................
   # relationships .............................................................
   # validations ...............................................................
   validates :announcement_type, :description, :name, :published_at, presence: true
-  validates :announcement_type, inclusion: {in: TYPES}
+  validates :announcement_type, inclusion: { in: TYPES }
 
   # callbacks .................................................................
   # scopes ....................................................................
@@ -36,8 +38,6 @@ class Announcement < ApplicationRecord
   end
 
   # protected instance methods ................................................
-  protected
 
   # private instance methods ..................................................
-  private
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "boot"
+require_relative 'boot'
 
 # only require Rails libraries that we actually use, this shaves off some memory
 # ActionMailbox and ActionText are not currently used by the app
@@ -19,7 +19,7 @@ require_relative "boot"
   require lib
 end
 
-require "view_component/engine"
+require 'view_component/engine'
 
 Bundler.require(*Rails.groups)
 Dotenv::Railtie.load

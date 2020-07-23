@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Users
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     before_action :set_service
@@ -6,7 +8,7 @@ module Users
     attr_reader :service, :user
 
     def github
-      handle_auth "Github"
+      handle_auth 'Github'
     end
 
     private
@@ -28,7 +30,7 @@ module Users
     end
 
     def auth
-      request.env["omniauth.auth"]
+      request.env['omniauth.auth']
     end
 
     def set_service

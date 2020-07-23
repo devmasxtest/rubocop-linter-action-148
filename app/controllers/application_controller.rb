@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :store_ids
@@ -28,7 +30,7 @@ class ApplicationController < ActionController::Base
   def set_ngrok_urls
     if Ngrok::Tunnel.running?
       url = Ngrok::Tunnel.ngrok_url_https
-      default_url_options = {host: url}
+      default_url_options = { host: url }
       Rails.application.config.action_controller.asset_host = url
       Rails.application.config.action_mailer.asset_host = url
       Rails.application.routes.default_url_options = default_url_options
