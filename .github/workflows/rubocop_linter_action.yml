@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Rubocop Linter with exit code
-      uses: andrewmcodes/rubocop-linter-action@rubocop-exit-code
+      uses: MiguelSavignano/rubocop-linter-action@rubocop-exit-code
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
