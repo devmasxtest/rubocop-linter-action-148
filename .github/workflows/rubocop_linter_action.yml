@@ -2,6 +2,7 @@ name: Linters
 
 on: [push]
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,6 +11,6 @@ jobs:
     - name: Rubocop Linter with exit code
       uses: MiguelSavignano/rubocop-linter-action@rubocop-exit-code
       with:
-        exit_on_failure: true
+        exit_on_failure: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
