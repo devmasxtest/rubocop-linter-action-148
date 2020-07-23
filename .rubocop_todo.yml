@@ -6,6 +6,9 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - 'bin/bundle'
 
 # Offense count: 6
 # Configuration parameters: IgnoredMethods.
